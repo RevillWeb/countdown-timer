@@ -1,0 +1,303 @@
+/**
+ * Created by leon on 02/08/2016.
+ */
+class CountdownTimer extends HTMLElement {
+
+    constructor() {
+        super();
+        this.innerHTML = `
+            <style>
+                @import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
+                .countdown-timer-container {
+                    font-family: 'Oswald', sans-serif;
+                }
+                .countdown-timer-container .section {
+                    width: 120px;
+                    height: 150px;
+                    float: left;
+                    margin-right: 10px;
+                    position: relative;
+                }
+                .countdown-timer-container .section .count-container {
+                    height: 120px; 
+                }
+                .countdown-timer-container .section .count-label {
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                }
+            </style>
+            <div class="countdown-timer-container">
+                <div class="section">
+                    <div class="count-container">
+                        <countdown-timer-number id="days"></countdown-timer-number>
+                    </div>
+                    <div class="count-label">DAYS</div>
+                </div>
+                <div class="section">
+                    <div class="count-container">
+                        <countdown-timer-number id="hours"></countdown-timer-number>
+                    </div>
+                    <div class="count-label">HOURS</div>
+                </div>
+                <div class="section">
+                    <div class="count-container">
+                        <countdown-timer-number id="minutes"></countdown-timer-number>
+                    </div>
+                    <div class="count-label">MINUTES</div>
+                </div>
+                <div class="section">
+                    <div class="count-container">
+                        <countdown-timer-number id="seconds"></countdown-timer-number>
+                    </div>
+                    <div class="count-label">SECONDS</div>
+                </div>
+            </div>
+            
+        `;
+
+        this.$days = this.querySelector("#days");
+        this.$hours = this.querySelector("#hours");
+        this.$minutes = this.querySelector("#minutes");
+        this.$seconds = this.querySelector("#seconds");
+
+        this._interval = null;
+    }
+
+    parseDateString(dateString) {
+        try {
+            this._date = new Date(dateString);
+        } catch (e) {
+            console.error("Couldn't parse date string:", e);
+        }
+    }
+
+    render() {
+        const now = new Date();
+        let delta = Math.abs(this._date - now) / 1000;
+        this._days = Math.floor(delta / 86400);
+        delta -= this._days * 86400;
+        this._hours = Math.floor(delta / 3600) % 24;
+        delta -= this._hours * 3600;
+        this._minutes = Math.floor(delta / 60) % 60;
+        delta -= this._minutes * 60;
+        this._seconds = Math.floor(delta % 60);
+
+        this.$days.setAttribute("value", this._days);
+        this.$hours.setAttribute("value", this._hours);
+        this.$minutes.setAttribute("value", this._minutes);
+        this.$seconds.setAttribute("value", this._seconds);
+
+    }
+
+    connectedCallback() {
+        this._interval = setInterval(() => {
+            this.render();
+        }, 1000);
+    }
+
+    disconnectedCallback() {
+        clearInterval(this._interval);
+    }
+
+    static get observedAttributes() { return ["date"]; }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+        if (newValue !== oldValue) {
+            this.parseDateString(newValue);
+            this.render();
+        }
+    }
+
+}
+
+customElements.define("countdown-timer", CountdownTimer);
+
+class CountdownTimerNumber extends HTMLElement {
+    constructor() {
+        super();
+        this.current = null;
+        this.next = null;
+        this.innerHTML = `
+            <style>
+                .count {        
+                  height: 120px;
+                  line-height: 120px;
+                  -moz-perspective: 320px;
+                  -webkit-perspective: 320px;
+                  perspective: 320px;
+                  position: absolute;
+                  text-align: center;                 
+                  -moz-transform: translateZ(0);
+                  -webkit-transform: translateZ(0);
+                  transform: translateZ(0);
+                  width: 120px;
+                }
+                .count span {
+                  background: #202020;
+                  color: #f8f8f8;
+                  display: block;
+                  font-size: 70px;
+                  left: 0;
+                  position: absolute;
+                  top: 0;                 
+                  -moz-transform-origin: 0 60px 0;
+                  -webkit-transform-origin: 0 60px 0;
+                  transform-origin: 0 60px 0;
+                  width: 100%;
+                }
+                .count.size4 span {
+                    font-size: 55px; 
+                }
+                .count.size5 span {
+                    font-size: 45px; 
+                }
+                .count.size6 span {
+                    font-size: 35px; 
+                }
+                .count span:before {
+                  border-bottom: 2px solid #000;
+                  content: "";
+                  left: 0;
+                  position: absolute;
+                  width: 100%;
+                }
+                .count span:after {               
+                  content: "";
+                  height: 100%;
+                  left: 0;
+                  position: absolute;
+                  top: 0;
+                  width: 100%;
+                }
+                .count .top {                                   
+                  height: 50%;
+                  overflow: hidden;
+                }
+                .count .top:before {
+                  bottom: 0;
+                }               
+                .count .bottom {                 
+                  height: 100%;
+                }
+                .count .bottom:before {
+                  top: 50%;
+                }                
+                .count .top {
+                  height: 50%;
+                }
+                .count .top.current {
+                  -moz-transform-style: flat;
+                  -webkit-transform-style: flat;
+                  transform-style: flat;
+                  z-index: 3;
+                }
+                .count .top.next {
+                  -moz-transform: rotate3d(1, 0, 0, -90deg);
+                  -ms-transform: rotate3d(1, 0, 0, -90deg);
+                  -webkit-transform: rotate3d(1, 0, 0, -90deg);
+                  transform: rotate3d(1, 0, 0, -90deg);
+                  z-index: 4;
+                }
+                .count .bottom.current {
+                  z-index: 2;
+                }
+                .count .bottom.next {
+                  z-index: 1;
+                }
+                .count.changing .bottom.current {
+                  -moz-transform: rotate3d(1, 0, 0, 90deg);
+                  -ms-transform: rotate3d(1, 0, 0, 90deg);
+                  -webkit-transform: rotate3d(1, 0, 0, 90deg);
+                  transform: rotate3d(1, 0, 0, 90deg);
+                  -moz-transition: -moz-transform 0.35s ease-in;
+                  -o-transition: -o-transform 0.35s ease-in;
+                  -webkit-transition: -webkit-transform 0.35s ease-in;
+                  transition: transform 0.35s ease-in;
+                }
+                .count.changing .top.next, .count.changed .top.next {
+                  -moz-transition: -moz-transform 0.35s ease-out 0.35s;
+                  -o-transition: -o-transform 0.35s ease-out 0.35s;
+                  -webkit-transition: -webkit-transform 0.35s ease-out;
+                  -webkit-transition-delay: 0.35s;
+                  transition: transform 0.35s ease-out 0.35s;
+                  -moz-transform: none;
+                  -ms-transform: none;
+                  -webkit-transform: none;
+                  transform: none;
+                }
+                .count.changed .top.current,
+                .count.changed .bottom.current {
+                  display: none;
+                }
+            </style>
+            <div class="count">           
+                <span class="current top"></span>
+                <span class="next top"></span>
+                <span class="current bottom"></span>
+                <span class="next bottom"></span>
+            </div>
+        `;
+        this.$count = this.querySelector(".count");
+        this.querySelector(".count .top.next").addEventListener("transitionend", () => {
+
+            //Clean up after the animation has been completed
+            this.$count.classList.add("changed");
+            this.$count.classList.remove("changing");
+            this.current = this.next;
+        });
+    }
+
+    static get observedAttributes() {
+        return ["value"];
+    }
+
+    setSize(value) {
+        const length = value.toString().length;
+        if (length > 3) {
+            this.$count.classList.add("size" + length);
+        }
+    }
+
+    render() {
+        if (this.current !== null) {
+            this.querySelectorAll(".current").forEach((el) => {
+                el.innerText = this.current;
+            });
+        }
+        if (this.next !== null) {
+            this.setSize(this.next);
+            this.querySelectorAll(".next").forEach((el) => {
+                el.innerText = this.next;
+            });
+        }
+    }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+        if (oldValue === null) {
+            const current = parseInt(newValue);
+            if (isNaN(current)) {
+                console.error("Value must be a number.");
+                return;
+            }
+            this.current = current;
+            this.render();
+        } else if (oldValue !== null && newValue !== oldValue) {
+            const next = parseInt(newValue);
+            if (isNaN(next)) {
+                console.error("Value must be a number.");
+                return;
+            }
+            this.next = next;
+            this.render();
+            //Initiate the animation
+            this.$count.classList.remove("changed");
+            this.$count.classList.remove("changing");
+            setTimeout(() => {
+                this.$count.classList.add("changing");
+            }, 20);
+        }
+    }
+}
+
+customElements.define("countdown-timer-number", CountdownTimerNumber);
