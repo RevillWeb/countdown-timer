@@ -1,8 +1,14 @@
 /**
  * Created by leon on 02/08/2016.
  */
-class CountdownTimer extends HTMLElement {
 
+/**
+ * Class which represents the main countdown timer element
+ */
+class CountdownTimer extends HTMLElement {
+    /**
+     * Construct the timer element with some initial markup and styling
+     */
     constructor() {
         super();
         this.innerHTML = `
@@ -64,6 +70,10 @@ class CountdownTimer extends HTMLElement {
         this._interval = null;
     }
 
+    /**
+     * Method to parse the date string to a valid date object
+     * @param dateString
+     */
     parseDateString(dateString) {
         try {
             this._date = new Date(dateString);
@@ -72,6 +82,9 @@ class CountdownTimer extends HTMLElement {
         }
     }
 
+    /**
+     * Method to update the components DOM
+     */
     render() {
         const now = new Date();
         let delta = Math.abs(this._date - now) / 1000;
@@ -90,19 +103,36 @@ class CountdownTimer extends HTMLElement {
 
     }
 
+    /**
+     * Method to initiate the interval when the timer is added to the DOM
+     */
     connectedCallback() {
         this._interval = setInterval(() => {
             this.render();
         }, 1000);
     }
 
+    /**
+     * When the timer is removed from the DOM clear the interval
+     */
     disconnectedCallback() {
         clearInterval(this._interval);
     }
 
+    /**
+     * Method which specifies which element attributes to observe
+     * @returns {string[]}
+     */
     static get observedAttributes() { return ["date"]; }
 
+    /**
+     * Re-render when the date string is changed
+     * @param name
+     * @param oldValue
+     * @param newValue
+     */
     attributeChangedCallback(name, oldValue, newValue) {
+        //"name" will only ever be the date attribute because of "observedAttributes"
         if (newValue !== oldValue) {
             this.parseDateString(newValue);
             this.render();
@@ -111,9 +141,19 @@ class CountdownTimer extends HTMLElement {
 
 }
 
+/**
+ * Define the custom element as countdown-timer using the Custom Elements V1 API
+ */
 customElements.define("countdown-timer", CountdownTimer);
 
+
+/**
+ * Class which represents the timer number element
+ */
 class CountdownTimerNumber extends HTMLElement {
+    /**
+     * Construct the number eleemnt with some initial HTML markup and styling
+     */
     constructor() {
         super();
         this.current = null;
@@ -240,7 +280,6 @@ class CountdownTimerNumber extends HTMLElement {
         `;
         this.$count = this.querySelector(".count");
         this.querySelector(".count .top.next").addEventListener("transitionend", () => {
-
             //Clean up after the animation has been completed
             this.$count.classList.add("changed");
             this.$count.classList.remove("changing");
@@ -248,10 +287,18 @@ class CountdownTimerNumber extends HTMLElement {
         });
     }
 
+    /**
+     * Only observe the value attribute
+     * @returns {string[]}
+     */
     static get observedAttributes() {
         return ["value"];
     }
 
+    /**
+     * Methid to determine the size class to be applied to the $count element
+     * @param value
+     */
     setSize(value) {
         const length = value.toString().length;
         if (length > 3) {
@@ -259,6 +306,9 @@ class CountdownTimerNumber extends HTMLElement {
         }
     }
 
+    /**
+     * Method used to update the number element DOM
+     */
     render() {
         if (this.current !== null) {
             this.querySelectorAll(".current").forEach((el) => {
@@ -273,6 +323,12 @@ class CountdownTimerNumber extends HTMLElement {
         }
     }
 
+    /**
+     * When the value attribute changes update the DOM accordingly and initiate the animation
+     * @param name
+     * @param oldValue
+     * @param newValue
+     */
     attributeChangedCallback(name, oldValue, newValue) {
         if (oldValue === null) {
             const current = parseInt(newValue);
@@ -300,4 +356,7 @@ class CountdownTimerNumber extends HTMLElement {
     }
 }
 
+/**
+ * Define the custom element as countdown-timer-number using the Custom Element V1 API
+ */
 customElements.define("countdown-timer-number", CountdownTimerNumber);
