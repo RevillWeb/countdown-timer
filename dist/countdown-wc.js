@@ -9,24 +9,27 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 /**
- * Created by leon on 02/08/2016.
+ * Created by Leon Revill on 02/08/2016.
+ * Twitter: @RevillWeb
+ * Blog: blog.revillweb.com
+ * Website: www.revillweb.com
  */
 
 /**
  * Class which represents the main countdown timer element
  */
-var CountdownTimer = function (_HTMLElement) {
-    _inherits(CountdownTimer, _HTMLElement);
+var CountdownWc = function (_HTMLElement) {
+    _inherits(CountdownWc, _HTMLElement);
 
     /**
      * Construct the timer element with some initial markup and styling
      */
-    function CountdownTimer() {
-        _classCallCheck(this, CountdownTimer);
+    function CountdownWc() {
+        _classCallCheck(this, CountdownWc);
 
-        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(CountdownTimer).call(this));
+        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(CountdownWc).call(this));
 
-        _this.innerHTML = "\n            <style>\n                @import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);\n                .countdown-timer-container {\n                    font-family: 'Oswald', sans-serif;\n                }\n                .countdown-timer-container .section {\n                    width: 120px;\n                    height: 150px;\n                    float: left;\n                    margin-right: 10px;\n                    position: relative;\n                }\n                .countdown-timer-container .section .count-container {\n                    height: 120px; \n                }\n                .countdown-timer-container .section .count-label {\n                    height: 30px;\n                    line-height: 30px;\n                    text-align: center;\n                }\n            </style>\n            <div class=\"countdown-timer-container\">\n                <div class=\"section\">\n                    <div class=\"count-container\">\n                        <countdown-timer-number id=\"days\"></countdown-timer-number>\n                    </div>\n                    <div class=\"count-label\">DAYS</div>\n                </div>\n                <div class=\"section\">\n                    <div class=\"count-container\">\n                        <countdown-timer-number id=\"hours\"></countdown-timer-number>\n                    </div>\n                    <div class=\"count-label\">HOURS</div>\n                </div>\n                <div class=\"section\">\n                    <div class=\"count-container\">\n                        <countdown-timer-number id=\"minutes\"></countdown-timer-number>\n                    </div>\n                    <div class=\"count-label\">MINUTES</div>\n                </div>\n                <div class=\"section\">\n                    <div class=\"count-container\">\n                        <countdown-timer-number id=\"seconds\"></countdown-timer-number>\n                    </div>\n                    <div class=\"count-label\">SECONDS</div>\n                </div>\n            </div>\n            \n        ";
+        _this.innerHTML = "\n            <style>\n                @import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);\n                .countdown-timer-container {\n                    font-family: 'Oswald', sans-serif;\n                }\n                .countdown-timer-container .section {\n                    width: 120px;\n                    height: 150px;\n                    float: left;\n                    margin-right: 10px;\n                    position: relative;\n                }\n                .countdown-timer-container .section .count-container {\n                    height: 120px; \n                }\n                .countdown-timer-container .section .count-label {\n                    height: 30px;\n                    line-height: 30px;\n                    text-align: center;\n                }\n            </style>\n            <div class=\"countdown-timer-container\">\n                <div class=\"section\">\n                    <div class=\"count-container\">\n                        <countdown-wc-number id=\"days\"></countdown-wc-number>\n                    </div>\n                    <div class=\"count-label\">DAYS</div>\n                </div>\n                <div class=\"section\">\n                    <div class=\"count-container\">\n                        <countdown-wc-number id=\"hours\"></countdown-wc-number>\n                    </div>\n                    <div class=\"count-label\">HOURS</div>\n                </div>\n                <div class=\"section\">\n                    <div class=\"count-container\">\n                        <countdown-wc-number id=\"minutes\"></countdown-wc-number>\n                    </div>\n                    <div class=\"count-label\">MINUTES</div>\n                </div>\n                <div class=\"section\">\n                    <div class=\"count-container\">\n                        <countdown-wc-number id=\"seconds\"></countdown-wc-number>\n                    </div>\n                    <div class=\"count-label\">SECONDS</div>\n                </div>\n            </div>\n            \n        ";
 
         _this.$days = _this.querySelector("#days");
         _this.$hours = _this.querySelector("#hours");
@@ -43,7 +46,7 @@ var CountdownTimer = function (_HTMLElement) {
      */
 
 
-    _createClass(CountdownTimer, [{
+    _createClass(CountdownWc, [{
         key: "parseDateString",
         value: function parseDateString(dateString) {
             try {
@@ -129,7 +132,7 @@ var CountdownTimer = function (_HTMLElement) {
         }
     }]);
 
-    return CountdownTimer;
+    return CountdownWc;
 }(HTMLElement);
 
 /**
@@ -137,22 +140,22 @@ var CountdownTimer = function (_HTMLElement) {
  */
 
 
-customElements.define("countdown-timer", CountdownTimer);
+customElements.define("countdown-wc", CountdownWc);
 
 /**
  * Class which represents the timer number element
  */
 
-var CountdownTimerNumber = function (_HTMLElement2) {
-    _inherits(CountdownTimerNumber, _HTMLElement2);
+var CountdownWcNumber = function (_HTMLElement2) {
+    _inherits(CountdownWcNumber, _HTMLElement2);
 
     /**
      * Construct the number eleemnt with some initial HTML markup and styling
      */
-    function CountdownTimerNumber() {
-        _classCallCheck(this, CountdownTimerNumber);
+    function CountdownWcNumber() {
+        _classCallCheck(this, CountdownWcNumber);
 
-        var _this3 = _possibleConstructorReturn(this, Object.getPrototypeOf(CountdownTimerNumber).call(this));
+        var _this3 = _possibleConstructorReturn(this, Object.getPrototypeOf(CountdownWcNumber).call(this));
 
         _this3.current = null;
         _this3.next = null;
@@ -173,7 +176,7 @@ var CountdownTimerNumber = function (_HTMLElement2) {
      */
 
 
-    _createClass(CountdownTimerNumber, [{
+    _createClass(CountdownWcNumber, [{
         key: "setSize",
 
 
@@ -253,7 +256,7 @@ var CountdownTimerNumber = function (_HTMLElement2) {
         }
     }]);
 
-    return CountdownTimerNumber;
+    return CountdownWcNumber;
 }(HTMLElement);
 
 /**
@@ -261,4 +264,4 @@ var CountdownTimerNumber = function (_HTMLElement2) {
  */
 
 
-customElements.define("countdown-timer-number", CountdownTimerNumber);
+customElements.define("countdown-wc-number", CountdownWcNumber);

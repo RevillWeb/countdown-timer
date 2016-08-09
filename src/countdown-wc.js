@@ -1,11 +1,14 @@
 /**
- * Created by leon on 02/08/2016.
+ * Created by Leon Revill on 02/08/2016.
+ * Twitter: @RevillWeb
+ * Blog: blog.revillweb.com
+ * Website: www.revillweb.com
  */
 
 /**
  * Class which represents the main countdown timer element
  */
-class CountdownTimer extends HTMLElement {
+class CountdownWc extends HTMLElement {
     /**
      * Construct the timer element with some initial markup and styling
      */
@@ -36,25 +39,25 @@ class CountdownTimer extends HTMLElement {
             <div class="countdown-timer-container">
                 <div class="section">
                     <div class="count-container">
-                        <countdown-timer-number id="days"></countdown-timer-number>
+                        <countdown-wc-number id="days"></countdown-wc-number>
                     </div>
                     <div class="count-label">DAYS</div>
                 </div>
                 <div class="section">
                     <div class="count-container">
-                        <countdown-timer-number id="hours"></countdown-timer-number>
+                        <countdown-wc-number id="hours"></countdown-wc-number>
                     </div>
                     <div class="count-label">HOURS</div>
                 </div>
                 <div class="section">
                     <div class="count-container">
-                        <countdown-timer-number id="minutes"></countdown-timer-number>
+                        <countdown-wc-number id="minutes"></countdown-wc-number>
                     </div>
                     <div class="count-label">MINUTES</div>
                 </div>
                 <div class="section">
                     <div class="count-container">
-                        <countdown-timer-number id="seconds"></countdown-timer-number>
+                        <countdown-wc-number id="seconds"></countdown-wc-number>
                     </div>
                     <div class="count-label">SECONDS</div>
                 </div>
@@ -144,13 +147,13 @@ class CountdownTimer extends HTMLElement {
 /**
  * Define the custom element as countdown-timer using the Custom Elements V1 API
  */
-customElements.define("countdown-timer", CountdownTimer);
+customElements.define("countdown-wc", CountdownWc);
 
 
 /**
  * Class which represents the timer number element
  */
-class CountdownTimerNumber extends HTMLElement {
+class CountdownWcNumber extends HTMLElement {
     /**
      * Construct the number eleemnt with some initial HTML markup and styling
      */
@@ -359,4 +362,4 @@ class CountdownTimerNumber extends HTMLElement {
 /**
  * Define the custom element as countdown-timer-number using the Custom Element V1 API
  */
-customElements.define("countdown-timer-number", CountdownTimerNumber);
+customElements.define("countdown-wc-number", CountdownWcNumber);
