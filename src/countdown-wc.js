@@ -14,7 +14,8 @@ class CountdownWc extends HTMLElement {
      */
     constructor() {
         super();
-        this.innerHTML = `
+        this.attachShadow({ mode: 'open' });
+        this.shadowRoot.innerHTML = `
             <style>
                 @import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
                 .countdown-timer-container {
@@ -65,10 +66,10 @@ class CountdownWc extends HTMLElement {
             
         `;
 
-        this.$days = this.querySelector("#days");
-        this.$hours = this.querySelector("#hours");
-        this.$minutes = this.querySelector("#minutes");
-        this.$seconds = this.querySelector("#seconds");
+        this.$days = this.shadowRoot.querySelector("#days");
+        this.$hours = this.shadowRoot.querySelector("#hours");
+        this.$minutes = this.shadowRoot.querySelector("#minutes");
+        this.$seconds = this.shadowRoot.querySelector("#seconds");
 
         this._interval = null;
     }
@@ -314,13 +315,15 @@ class CountdownWcNumber extends HTMLElement {
      */
     render() {
         if (this.current !== null) {
-            this.querySelectorAll(".current").forEach((el) => {
+            const $currents = this.querySelectorAll(".current");
+            [].forEach.call($currents, (el) => {
                 el.innerText = this.current;
             });
         }
         if (this.next !== null) {
             this.setSize(this.next);
-            this.querySelectorAll(".next").forEach((el) => {
+            const $nexts = this.querySelectorAll(".next");
+           [].forEach.call($nexts, (el) => {
                 el.innerText = this.next;
             });
         }

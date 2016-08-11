@@ -29,12 +29,13 @@ var CountdownWc = function (_HTMLElement) {
 
         var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(CountdownWc).call(this));
 
-        _this.innerHTML = "\n            <style>\n                @import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);\n                .countdown-timer-container {\n                    font-family: 'Oswald', sans-serif;\n                }\n                .countdown-timer-container .section {\n                    width: 120px;\n                    height: 150px;\n                    float: left;\n                    margin-right: 10px;\n                    position: relative;\n                }\n                .countdown-timer-container .section .count-container {\n                    height: 120px; \n                }\n                .countdown-timer-container .section .count-label {\n                    height: 30px;\n                    line-height: 30px;\n                    text-align: center;\n                }\n            </style>\n            <div class=\"countdown-timer-container\">\n                <div class=\"section\">\n                    <div class=\"count-container\">\n                        <countdown-wc-number id=\"days\"></countdown-wc-number>\n                    </div>\n                    <div class=\"count-label\">DAYS</div>\n                </div>\n                <div class=\"section\">\n                    <div class=\"count-container\">\n                        <countdown-wc-number id=\"hours\"></countdown-wc-number>\n                    </div>\n                    <div class=\"count-label\">HOURS</div>\n                </div>\n                <div class=\"section\">\n                    <div class=\"count-container\">\n                        <countdown-wc-number id=\"minutes\"></countdown-wc-number>\n                    </div>\n                    <div class=\"count-label\">MINUTES</div>\n                </div>\n                <div class=\"section\">\n                    <div class=\"count-container\">\n                        <countdown-wc-number id=\"seconds\"></countdown-wc-number>\n                    </div>\n                    <div class=\"count-label\">SECONDS</div>\n                </div>\n            </div>\n            \n        ";
+        _this.attachShadow({ mode: 'open' });
+        _this.shadowRoot.innerHTML = "\n            <style>\n                @import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);\n                .countdown-timer-container {\n                    font-family: 'Oswald', sans-serif;\n                }\n                .countdown-timer-container .section {\n                    width: 120px;\n                    height: 150px;\n                    float: left;\n                    margin-right: 10px;\n                    position: relative;\n                }\n                .countdown-timer-container .section .count-container {\n                    height: 120px; \n                }\n                .countdown-timer-container .section .count-label {\n                    height: 30px;\n                    line-height: 30px;\n                    text-align: center;\n                }\n            </style>\n            <div class=\"countdown-timer-container\">\n                <div class=\"section\">\n                    <div class=\"count-container\">\n                        <countdown-wc-number id=\"days\"></countdown-wc-number>\n                    </div>\n                    <div class=\"count-label\">DAYS</div>\n                </div>\n                <div class=\"section\">\n                    <div class=\"count-container\">\n                        <countdown-wc-number id=\"hours\"></countdown-wc-number>\n                    </div>\n                    <div class=\"count-label\">HOURS</div>\n                </div>\n                <div class=\"section\">\n                    <div class=\"count-container\">\n                        <countdown-wc-number id=\"minutes\"></countdown-wc-number>\n                    </div>\n                    <div class=\"count-label\">MINUTES</div>\n                </div>\n                <div class=\"section\">\n                    <div class=\"count-container\">\n                        <countdown-wc-number id=\"seconds\"></countdown-wc-number>\n                    </div>\n                    <div class=\"count-label\">SECONDS</div>\n                </div>\n            </div>\n            \n        ";
 
-        _this.$days = _this.querySelector("#days");
-        _this.$hours = _this.querySelector("#hours");
-        _this.$minutes = _this.querySelector("#minutes");
-        _this.$seconds = _this.querySelector("#seconds");
+        _this.$days = _this.shadowRoot.querySelector("#days");
+        _this.$hours = _this.shadowRoot.querySelector("#hours");
+        _this.$minutes = _this.shadowRoot.querySelector("#minutes");
+        _this.$seconds = _this.shadowRoot.querySelector("#seconds");
 
         _this._interval = null;
         return _this;
@@ -201,13 +202,15 @@ var CountdownWcNumber = function (_HTMLElement2) {
             var _this4 = this;
 
             if (this.current !== null) {
-                this.querySelectorAll(".current").forEach(function (el) {
+                var $currents = this.querySelectorAll(".current");
+                [].forEach.call($currents, function (el) {
                     el.innerText = _this4.current;
                 });
             }
             if (this.next !== null) {
                 this.setSize(this.next);
-                this.querySelectorAll(".next").forEach(function (el) {
+                var $nexts = this.querySelectorAll(".next");
+                [].forEach.call($nexts, function (el) {
                     el.innerText = _this4.next;
                 });
             }
