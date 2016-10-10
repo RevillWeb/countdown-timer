@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40311dac-c14b-458e-bf73-09895e3cea6d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/polyfills/skatejs-web-components.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/polyfills/CustomElements.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/countdown-component.iml" afterPath="$PROJECT_DIR$/.idea/countdown-component.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/polyfills/skatejs-web-components.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/countdown-wc.js" afterPath="$PROJECT_DIR$/dist/countdown-wc.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/countdown-wc.js" afterPath="$PROJECT_DIR$/src/countdown-wc.js" />
     </list>
     <ignored path="countdown-component.iws" />
@@ -32,47 +31,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="63" selection-start-line="5" selection-start-column="63" selection-end-line="5" selection-end-column="63" />
+            <state relative-caret-position="45">
+              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="skatejs-web-components.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/polyfills/skatejs-web-components.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="83" selection-start-line="5" selection-start-column="83" selection-end-line="5" selection-end-column="83" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="countdown-wc.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="countdown-wc.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/countdown-wc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+            <state relative-caret-position="30">
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <marker date="1470943418139" expanded="true" signature="464:1269" ph="..." />
-                <marker date="1470943418139" expanded="true" signature="598:672" ph="{...}" />
-                <marker date="1470943418139" expanded="true" signature="725:926" ph="{...}" />
-                <marker date="1470943418139" expanded="true" signature="996:1051" ph="{...}" />
-                <marker date="1470943418139" expanded="true" signature="1117:1249" ph="{...}" />
-                <marker date="1470943418139" expanded="true" signature="1321:2442" ph="..." />
-                <marker date="1470943418139" expanded="true" signature="1359:1593" ph="..." />
-                <marker date="1470943418139" expanded="true" signature="1409:1514" ph="..." />
-                <marker date="1470943418139" expanded="true" signature="1631:1867" ph="..." />
-                <marker date="1470943418139" expanded="true" signature="1681:1787" ph="..." />
-                <marker date="1470943418139" expanded="true" signature="1905:2145" ph="..." />
-                <marker date="1470943418139" expanded="true" signature="1955:2063" ph="..." />
-                <marker date="1470943418139" expanded="true" signature="2183:2423" ph="..." />
-                <marker date="1470943418139" expanded="true" signature="2233:2341" ph="..." />
+                <marker date="1476120540000" expanded="true" signature="479:1284" ph="..." />
+                <marker date="1476120540000" expanded="true" signature="613:687" ph="{...}" />
+                <marker date="1476120540000" expanded="true" signature="740:941" ph="{...}" />
+                <marker date="1476120540000" expanded="true" signature="1011:1066" ph="{...}" />
+                <marker date="1476120540000" expanded="true" signature="1132:1264" ph="{...}" />
+                <marker date="1476120540000" expanded="true" signature="1336:2457" ph="..." />
+                <marker date="1476120540000" expanded="true" signature="1374:1608" ph="..." />
+                <marker date="1476120540000" expanded="true" signature="1424:1529" ph="..." />
+                <marker date="1476120540000" expanded="true" signature="1646:1882" ph="..." />
+                <marker date="1476120540000" expanded="true" signature="1696:1802" ph="..." />
+                <marker date="1476120540000" expanded="true" signature="1920:2160" ph="..." />
+                <marker date="1476120540000" expanded="true" signature="1970:2078" ph="..." />
+                <marker date="1476120540000" expanded="true" signature="2198:2438" ph="..." />
+                <marker date="1476120540000" expanded="true" signature="2248:2356" ph="..." />
               </folding>
             </state>
           </provider>
@@ -81,8 +69,8 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
+            <state relative-caret-position="101">
+              <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -91,7 +79,7 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
+            <state relative-caret-position="705">
               <caret line="47" column="12" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
               <folding />
             </state>
@@ -123,8 +111,8 @@
         <option value="$PROJECT_DIR$/dist/countdown-timer.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/countdown-timer-wc.js" />
-        <option value="$PROJECT_DIR$/src/countdown-wc.js" />
         <option value="$PROJECT_DIR$/polyfills/skatejs-web-components.js" />
+        <option value="$PROJECT_DIR$/src/countdown-wc.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/package.json" />
       </list>
@@ -136,11 +124,13 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="773" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -167,31 +157,33 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="countdown-component" />
+              <option name="myItemId" value="countdown-timer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="countdown-component" />
+              <option name="myItemId" value="countdown-timer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="countdown-component" />
+              <option name="myItemId" value="countdown-timer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="countdown-component" />
+              <option name="myItemId" value="countdown-timer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="countdown-component" />
+              <option name="myItemId" value="countdown-timer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -201,22 +193,20 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="countdown-component" />
+              <option name="myItemId" value="countdown-timer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="countdown-component" />
+              <option name="myItemId" value="countdown-timer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="polyfills" />
+              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -229,7 +219,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wcremoteconf" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -242,30 +232,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <method />
-    </configuration>
-    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
-      <method />
-    </configuration>
-    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" value="" />
-      <option name="executablePath" />
-      <option name="filePath" />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -280,19 +246,6 @@
       <scripts />
       <node-interpreter value="project" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory />
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui />
-      <extra-mocha-options />
-      <test-kind>DIRECTORY</test-kind>
-      <test-directory />
-      <recursive>false</recursive>
       <method />
     </configuration>
   </component>
@@ -318,25 +271,25 @@
     <option name="totallyTimeSpent" value="22514000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17650159" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17633042" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13001083" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5110132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4907909" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -357,6 +310,61 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="63" selection-start-line="5" selection-start-column="63" selection-end-line="5" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polyfills/skatejs-web-components.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="83" selection-start-line="5" selection-start-column="83" selection-end-line="5" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/countdown-wc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1476120540000" expanded="true" signature="479:1284" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="613:687" ph="{...}" />
+            <marker date="1476120540000" expanded="true" signature="740:941" ph="{...}" />
+            <marker date="1476120540000" expanded="true" signature="1011:1066" ph="{...}" />
+            <marker date="1476120540000" expanded="true" signature="1132:1264" ph="{...}" />
+            <marker date="1476120540000" expanded="true" signature="1336:2457" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="1374:1608" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="1424:1529" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="1646:1882" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="1696:1802" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="1920:2160" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="1970:2078" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="2198:2438" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="2248:2356" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="12" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
@@ -368,21 +376,20 @@
         <state relative-caret-position="68">
           <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1470943418139" expanded="true" signature="464:1269" ph="..." />
-            <marker date="1470943418139" expanded="true" signature="598:672" ph="{...}" />
-            <marker date="1470943418139" expanded="true" signature="725:926" ph="{...}" />
-            <marker date="1470943418139" expanded="true" signature="996:1051" ph="{...}" />
-            <marker date="1470943418139" expanded="true" signature="1117:1249" ph="{...}" />
-            <marker date="1470943418139" expanded="true" signature="1321:2442" ph="..." />
-            <marker date="1470943418139" expanded="true" signature="1359:1593" ph="..." />
-            <marker date="1470943418139" expanded="true" signature="1409:1514" ph="..." />
-            <marker date="1470943418139" expanded="true" signature="1631:1867" ph="..." />
-            <marker date="1470943418139" expanded="true" signature="1681:1787" ph="..." />
-            <marker date="1470943418139" expanded="true" signature="1905:2145" ph="..." />
-            <marker date="1470943418139" expanded="true" signature="1955:2063" ph="..." />
-            <marker date="1470943418139" expanded="true" signature="2183:2423" ph="..." />
-            <marker date="1470943418139" expanded="true" signature="2233:2341" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="479:1284" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="613:687" ph="{...}" />
+            <marker date="1476120540000" expanded="true" signature="740:941" ph="{...}" />
+            <marker date="1476120540000" expanded="true" signature="1011:1066" ph="{...}" />
+            <marker date="1476120540000" expanded="true" signature="1132:1264" ph="{...}" />
+            <marker date="1476120540000" expanded="true" signature="1336:2457" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="1374:1608" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="1424:1529" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="1646:1882" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="1696:1802" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="1920:2160" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="1970:2078" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="2198:2438" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="2248:2356" ph="..." />
           </folding>
         </state>
       </provider>
@@ -403,157 +410,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/polyfills/CustomElements.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9486">
-          <caret line="566" column="3" selection-start-line="566" selection-start-column="3" selection-end-line="567" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../webcomponentsjs/src/WebComponents/shadowdom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/polyfills/CustomElements.js" />
+    <entry file="file://$PROJECT_DIR$/../webcomponentsjs/src/WebComponents/shadowdom.js" />
     <entry file="file://$PROJECT_DIR$/pollyfills/ShadowDOM/wrappers/Node.js" />
-    <entry file="file://$PROJECT_DIR$/../webcomponentsjs/src/CustomElements/v1/CustomElements.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../webcomponentsjs/src/CustomElements/CustomElements.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../webcomponentsjs/src/CustomElements/v1/CustomElements.js" />
+    <entry file="file://$PROJECT_DIR$/../webcomponentsjs/src/CustomElements/CustomElements.js" />
     <entry file="file://$PROJECT_DIR$/../webcomponentsjs/webcomponents.js" />
-    <entry file="file://$PROJECT_DIR$/../webcomponentsjs/dist/webcomponents.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="4221" column="9" selection-start-line="4222" selection-start-column="30" selection-end-line="4222" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../webcomponentsjs/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="123" column="87" selection-start-line="123" selection-start-column="87" selection-end-line="123" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../webcomponentsjs/dist/webcomponents.js" />
+    <entry file="file://$PROJECT_DIR$/../webcomponentsjs/gulpfile.js" />
     <entry file="file://$PROJECT_DIR$/polyfills/ShadowDOM.min.js" />
-    <entry file="file://$PROJECT_DIR$/../webcomponentsjs/dist/ShadowDOM.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../webcomponentsjs/dist/ShadowDOM.js" />
     <entry file="file://$PROJECT_DIR$/polyfills/ShadowDOM.js" />
     <entry file="file://$PROJECT_DIR$/polyfills/webcomponents.min.js" />
-    <entry file="file://$PROJECT_DIR$/../webcomponentsjs/dist/CustomElements.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="907" column="5" selection-start-line="119" selection-start-column="51" selection-end-line="119" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../webcomponentsjs/dist/CustomElements.js" />
     <entry file="file://$PROJECT_DIR$/polyfills/webcomponents-lite.min.js" />
     <entry file="file://$PROJECT_DIR$/webcomponentsjs/src/URL/URL.js" />
     <entry file="file://$PROJECT_DIR$/webcomponentsjs/webcomponents.js" />
     <entry file="file://$PROJECT_DIR$/webcomponentsjs/dist/CustomElementsV1.min.js" />
     <entry file="file://$PROJECT_DIR$/polyfills/CustomElementsV1.min.js" />
-    <entry file="file://$PROJECT_DIR$/../webcomponentsjs/src/CustomElements/v1/native-shim.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/named-slots-1.0.0/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="65" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/polyfills/CustomElements.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9486">
-          <caret line="566" column="3" selection-start-line="566" selection-start-column="3" selection-end-line="567" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../webcomponentsjs/src/CustomElements/v1/native-shim.js" />
+    <entry file="file://$USER_HOME$/Downloads/named-slots-1.0.0/package.json" />
+    <entry file="file://$PROJECT_DIR$/polyfills/CustomElements.js" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
+        <state relative-caret-position="705">
           <caret line="47" column="12" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/countdown-timer-wc.js" />
-    <entry file="file://$PROJECT_DIR$/polyfills/webcomponents.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/skatejs-web-components/dist/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="1034" column="62" selection-start-line="1034" selection-start-column="62" selection-end-line="1034" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/skatejs-web-components/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/skatejs-web-components/dist/index-with-deps.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="0" column="4408" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="63" selection-start-line="5" selection-start-column="63" selection-end-line="5" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/polyfills/webcomponents.js" />
+    <entry file="file://$PROJECT_DIR$/node_modules/skatejs-web-components/dist/index.js" />
+    <entry file="file://$PROJECT_DIR$/node_modules/skatejs-web-components/src/index.js" />
+    <entry file="file://$PROJECT_DIR$/node_modules/skatejs-web-components/dist/index-with-deps.min.js" />
     <entry file="file://$PROJECT_DIR$/polyfills/skatejs-web-components.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="75">
           <caret line="5" column="83" selection-start-line="5" selection-start-column="83" selection-end-line="5" selection-end-column="83" />
           <folding />
         </state>
@@ -561,25 +454,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/countdown-wc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+        <state relative-caret-position="30">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1470943418139" expanded="true" signature="464:1269" ph="..." />
-            <marker date="1470943418139" expanded="true" signature="598:672" ph="{...}" />
-            <marker date="1470943418139" expanded="true" signature="725:926" ph="{...}" />
-            <marker date="1470943418139" expanded="true" signature="996:1051" ph="{...}" />
-            <marker date="1470943418139" expanded="true" signature="1117:1249" ph="{...}" />
-            <marker date="1470943418139" expanded="true" signature="1321:2442" ph="..." />
-            <marker date="1470943418139" expanded="true" signature="1359:1593" ph="..." />
-            <marker date="1470943418139" expanded="true" signature="1409:1514" ph="..." />
-            <marker date="1470943418139" expanded="true" signature="1631:1867" ph="..." />
-            <marker date="1470943418139" expanded="true" signature="1681:1787" ph="..." />
-            <marker date="1470943418139" expanded="true" signature="1905:2145" ph="..." />
-            <marker date="1470943418139" expanded="true" signature="1955:2063" ph="..." />
-            <marker date="1470943418139" expanded="true" signature="2183:2423" ph="..." />
-            <marker date="1470943418139" expanded="true" signature="2233:2341" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="479:1284" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="613:687" ph="{...}" />
+            <marker date="1476120540000" expanded="true" signature="740:941" ph="{...}" />
+            <marker date="1476120540000" expanded="true" signature="1011:1066" ph="{...}" />
+            <marker date="1476120540000" expanded="true" signature="1132:1264" ph="{...}" />
+            <marker date="1476120540000" expanded="true" signature="1336:2457" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="1374:1608" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="1424:1529" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="1646:1882" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="1696:1802" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="1920:2160" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="1970:2078" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="2198:2438" ph="..." />
+            <marker date="1476120540000" expanded="true" signature="2248:2356" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>

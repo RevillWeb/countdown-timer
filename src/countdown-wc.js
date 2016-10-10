@@ -12,10 +12,10 @@ class CountdownWc extends HTMLElement {
     /**
      * Construct the timer element with some initial markup and styling
      */
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
-        this.shadowRoot.innerHTML = `
+    constructor(self) {
+        self = super(self);
+        self.attachShadow({ mode: 'open' });
+        self.shadowRoot.innerHTML = `
             <style>
                 @import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
                 .countdown-timer-container {
@@ -65,13 +65,8 @@ class CountdownWc extends HTMLElement {
             </div>
             
         `;
-
-        this.$days = this.shadowRoot.querySelector("#days");
-        this.$hours = this.shadowRoot.querySelector("#hours");
-        this.$minutes = this.shadowRoot.querySelector("#minutes");
-        this.$seconds = this.shadowRoot.querySelector("#seconds");
-
-        this._interval = null;
+        self._interval = null;
+        return self;
     }
 
     /**
@@ -111,6 +106,11 @@ class CountdownWc extends HTMLElement {
      * Method to initiate the interval when the timer is added to the DOM
      */
     connectedCallback() {
+        this.$days = this.shadowRoot.querySelector("#days");
+        this.$hours = this.shadowRoot.querySelector("#hours");
+        this.$minutes = this.shadowRoot.querySelector("#minutes");
+        this.$seconds = this.shadowRoot.querySelector("#seconds");
+        this.render();
         this._interval = setInterval(() => {
             this.render();
         }, 1000);
@@ -137,9 +137,8 @@ class CountdownWc extends HTMLElement {
      */
     attributeChangedCallback(name, oldValue, newValue) {
         //"name" will only ever be the date attribute because of "observedAttributes"
-        if (newValue !== oldValue) {
+        if (newValue !== null && newValue !== oldValue) {
             this.parseDateString(newValue);
-            this.render();
         }
     }
 
@@ -158,11 +157,11 @@ class CountdownWcNumber extends HTMLElement {
     /**
      * Construct the number eleemnt with some initial HTML markup and styling
      */
-    constructor() {
-        super();
-        this.current = null;
-        this.next = null;
-        this.innerHTML = `
+    constructor(self) {
+        self = super(self);
+        self.current = null;
+        self.next = null;
+        self.innerHTML = `
             <style>
                 .count {        
                   height: 120px;
@@ -282,6 +281,10 @@ class CountdownWcNumber extends HTMLElement {
                 <span class="next bottom"></span>
             </div>
         `;
+        return self;
+    }
+
+    connectedCallback() {
         this.$count = this.querySelector(".count");
         this.querySelector(".count .top.next").addEventListener("transitionend", () => {
             //Clean up after the animation has been completed
